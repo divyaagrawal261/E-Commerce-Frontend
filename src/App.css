@@ -1,0 +1,3 @@
+.shopTheLook:hover > .innerShopCard{
+    display: flex !important;
+}

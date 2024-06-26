@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 
 function LandingCarousel() {
   return (
-    <Swiper loop={true} navigation={true} pagination={true} slidesPerView={1} modules={[Navigation, Pagination]}>
+    <Swiper loop={true} navigation={true} pagination={true} slidesPerView={1} modules={[Navigation, Pagination]} grabCursor={true}>
         {landingCarousel.map(({src})=><SwiperSlide className="w-full" key={src}><img src={src} alt="" className='w-full'/></SwiperSlide>)}
     </Swiper>
   )

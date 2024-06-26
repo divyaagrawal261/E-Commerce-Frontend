@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
-      <nav className="sticky top-0 z-10 block w-full max-w-full px-4 py-2 text-black bg-white border rounded-none shadow-md h-max border-white/80 bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200">
+      <nav className="sticky top-0 z-10 block w-full max-w-full px-4 py-2 text-black bg-white border rounded-none shadow-md h-max border-white/80 backdrop-blur-2xl backdrop-saturate-200">
           <div className="flex items-center justify-between text-blue-gray-900">
             <Link to="#" className="mr-4 block cursor-pointer py-1.5 font-sans text-base font-medium leading-relaxed text-inherit antialiased">
               Black Purl
