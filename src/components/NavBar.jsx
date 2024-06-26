@@ -5,7 +5,7 @@ function NavBar() {
   return (
       <nav className="sticky top-0 z-10 block w-full max-w-full px-4 py-2 text-black bg-white border rounded-none shadow-md h-max border-white/80 backdrop-blur-2xl backdrop-saturate-200">
           <div className="flex items-center justify-between text-blue-gray-900">
-            <Link to="#" className="mr-4 block cursor-pointer py-1.5 font-sans text-base font-medium leading-relaxed text-inherit antialiased">
+            <Link to="/" className="mr-4 block cursor-pointer py-1.5 font-sans text-base font-medium leading-relaxed text-inherit antialiased">
               Black Purl
             </Link>
             <div className="flex items-center gap-4">
@@ -22,7 +22,7 @@ function NavBar() {
                     </Link>
                   </li>
                   <li className="block p-1 font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
-                    <Link to="#" className="flex items-center">
+                    <Link to="/products" className="flex items-center">
                       PRODUCTS
                     </Link>
                   </li>

@@ -135,5 +135,10 @@ export const Trending = [
         name:"Men Green Slim Fit Full-sleeves Shirt",
         category:"CASUAL SHIRTS",
         rate:"2599"
+    },{
+        src:"https://imagescdn.louisphilippe.com/img/app/product/3/39629398-13437136.jpg?auto=format&w=390",
+        name:"Men Green Slim Fit Full-sleeves Shirt",
+        category:"CASUAL SHIRTS",
+        rate:"2599"
     },
 ]
