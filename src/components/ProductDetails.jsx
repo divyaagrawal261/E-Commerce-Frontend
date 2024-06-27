@@ -15,10 +15,10 @@ function ProductDetails({productName, productDesc, rate, category}) {
             <li className='bg-slate-500 w-fit px-3 p-2 rounded-full text-white'>XL</li>
             <li className='bg-slate-500 w-fit p-2 rounded-full text-white'>XXL</li>
         </ul>
-        <button className='w-full p-2 border mt-4'>BUY NOW</button>
+        <button className='w-full p-2 border mt-4 hover:bg-black hover:text-white'>BUY NOW</button>
         <div className="w-full flex mt-2 gap-2">
-            <button className="w-1/2 border p-2">ADD TO CART</button>
-            <button className="w-1/2 border p-2">ADD TO WISHLIST</button>
+            <button className="w-1/2 border p-2 hover:bg-black hover:text-white">ADD TO CART</button>
+            <button className="w-1/2 border p-2 hover:bg-black hover:text-white">ADD TO WISHLIST</button>
         </div>
         <hr className='my-12'/>
         <h3 className='text-xl mb-2'>Product Description</h3>

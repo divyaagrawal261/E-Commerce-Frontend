@@ -21,7 +21,7 @@ function App() {
       <Route path="/products/t-shirts" element={<ProductsPage productCategory={"T-Shirts"} productsArray={TShirts}/>}/>
       <Route path="/products/ties" element={<ProductsPage productCategory={"Ties"} productsArray={Ties}/>}/>
       <Route path="/products/denims" element={<ProductsPage productCategory={"Denims"} productsArray={Trousers}/>}/>
-      <Route path="/details" element={<DetailPage/>}/>
+      <Route path="/details/:name" element={<DetailPage/>}/>
       <Route path="/checkout" element={<ShoppingBag/>}/>
       </Routes>
 <Footer/>
