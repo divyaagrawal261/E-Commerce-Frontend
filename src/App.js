@@ -8,13 +8,17 @@ import DetailPage from './pages/DetailPage';
 import ShoppingBag from './pages/ShoppingBag';
 import { Products, TShirts, Ties } from './constants';
 import { Trousers } from './constants';
+import LoginForm from './pages/LoginPage';
+import SignUpForm from './pages/SignUpPage';
 
 function App() {
   return (
     <div className="App">
 <NavBar/>
       <Routes>
+      <Route path="/login" element={<LoginForm/>}/>
       <Route path="/" element={<HomePage/>}/>
+      <Route path="/register" element={<SignUpForm/>}/>
       <Route path="/products" element={<ProductsPage productsArray={Products}/>}/>
       <Route path="/products/trousers" element={<ProductsPage productCategory={"Trousers"} productsArray={Trousers}/>}/>
       <Route path="/products/shirts" element={<ProductsPage productCategory={"Shirts"} productsArray={TShirts}/>}/>
