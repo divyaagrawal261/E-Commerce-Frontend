@@ -1,11 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function ProductCard({ src, name, category, rate }) {
+function ProductCard({ src, name, category, rate, id, desc }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/details/${encodeURIComponent(name)}`, { state: { src, name, category, rate } });
+    navigate(`/details/${encodeURIComponent(name)}`, { state: { id, src, name, category, rate, desc } });
   };
 
   return (

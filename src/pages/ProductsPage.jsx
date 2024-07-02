@@ -37,8 +37,8 @@ function ProductsPage({ productCategory }) {
       <h2 className='text-center my-5 text-4xl'>Black Purl {productCategory || "Best Picks"}</h2>
       <div className="productsContainer max-w-[1200px] mx-auto grid md:grid-rows-3 md:grid-cols-4 grid-rows-6 grid-cols-2 gap-4 px-4 xl:px-0">
         {products.length > 0 ? (
-          products.map(({ src, name, rate, category }) => (
-            <ProductCard key={name} className="mx-auto" src={src} category={category} name={name} rate={rate} />
+          products.map(({ src, name, rate, category, desc, _id }) => (
+            <ProductCard key={_id} className="mx-auto" src={src} category={category} name={name} rate={rate} id={_id} desc={desc}/>
           ))
         ) : (
           "Loading..."

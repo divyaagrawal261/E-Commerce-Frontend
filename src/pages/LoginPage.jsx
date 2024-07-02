@@ -42,7 +42,8 @@ const LoginForm = () => {
 
         if (response.ok) {
             const data = await response.json();
-            localStorage.setItem('accessToken', data.accessToken);
+            localStorage.setItem('accessToken', data.token);
+            localStorage.setItem('isLoggedIn', true);
             setShowLoader(false)
             setLoginFlag(true);
             openModal();

@@ -8,7 +8,7 @@ function DetailPage() {
   const location = useLocation();
   const { name } = useParams();
   
-  const { src, category, rate } = location.state || {};
+  const { src, category, rate, desc, id  } = location.state || {};
 
   const decodedName = decodeURIComponent(name);
 
@@ -19,7 +19,7 @@ function DetailPage() {
         <div className="h-[564px] p-8 flex items-center justify-center">
           <img src={src} alt={decodedName} className='w-[500px] aspect-square'/>
         </div>
-        <ProductDetails productName={decodedName} category={category} rate={rate}/>
+        <ProductDetails productName={decodedName} category={category} rate={rate} productDesc={desc} id={id}/>
       </div>
       <hr className='my-10'/>
       <h3 className='max-w-[1300px] mx-auto text-3xl my-4 px-4'>Shop similar</h3>

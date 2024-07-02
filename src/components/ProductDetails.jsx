@@ -1,6 +1,20 @@
 import React from 'react'
 
-function ProductDetails({productName, productDesc, rate, category}) {
+function ProductDetails({productName, productDesc, rate, category, id}) {
+
+    function addToCart(){
+        fetch(`${process.env.REACT_APP_API_URL}/cart/add`,{
+            method:"POST",
+            headers: {
+                'Content-Type': 'application/json',
+                "Authorization": "Bearer "+localStorage.getItem("accessToken")
+            },
+            body: JSON.stringify({
+                productId:id,
+            })
+        }).then(res=>res.json()).then((data)=>{console.log(data)}).catch((err)=>console.log(err));
+    }
+
   return (
     <div className="p-8 flex flex-col">
         <h3 className='text-4xl mb-2'>{productName || "Product Name"}</h3>
@@ -17,12 +31,12 @@ function ProductDetails({productName, productDesc, rate, category}) {
         </ul>
         <button className='w-full p-2 border mt-4 hover:bg-black hover:text-white'>BUY NOW</button>
         <div className="w-full flex mt-2 gap-2">
-            <button className="w-1/2 border p-2 hover:bg-black hover:text-white">ADD TO CART</button>
+            <button className="w-1/2 border p-2 hover:bg-black hover:text-white" onClick={addToCart}>ADD TO CART</button>
             <button className="w-1/2 border p-2 hover:bg-black hover:text-white">ADD TO WISHLIST</button>
         </div>
         <hr className='my-12'/>
         <h3 className='text-xl mb-2'>Product Description</h3>
-        <p className='text-md pr-5'>{"For the quint essential blue-tie lover, Louis Philippe brings you this solid blue tie that`s bound to make a powerful statement. Ideal for formal occasions, it`s made from 100% polyester, ensuring comfort and durability without harming the environment. Its exquisite craftsmanship adds a refined touch to your ensemble, making you look sharp and sophisticated. Boost your confidence, charm guests, and make a lasting impression at meetings with this go-to accessory that`ll transcend your wardrobe season after season." || productDesc}</p>
+        <p className='text-md pr-5'>{productDesc}</p>
         <hr className="my-5" />
         <h3 className='text-xl mb-2'>Product Details</h3>
         <div className="grid gird-rows-4 grid-cols-2 text-md gap-2">
