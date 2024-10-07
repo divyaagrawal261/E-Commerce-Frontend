@@ -7,13 +7,14 @@ function ProductsPage({ productCategory }) {
 
   async function getProducts() {
     setShowLoader(true);
-    var response;
+    let response;
 
-    if(productCategory)
-    response = await fetch(`${process.env.REACT_APP_API_URL}/products/category/${productCategory}`);
-    
-    else
-    response = await fetch(`${process.env.REACT_APP_API_URL}/products/all`);
+    // Check if a productCategory exists and fetch accordingly
+    if (productCategory) {
+      response = await fetch(`${process.env.REACT_APP_API_URL}/products/category/${productCategory}`);
+    } else {
+      response = await fetch(`${process.env.REACT_APP_API_URL}/products/all`);
+    }
 
     if (response.ok) {
       const productsArray = await response.json();
@@ -22,9 +23,11 @@ function ProductsPage({ productCategory }) {
     setShowLoader(false);
   }
 
+  // Run getProducts whenever the productCategory prop changes
   useEffect(() => {
     getProducts();
-  }, []);
+  }, [productCategory]); // <-- Now the effect depends on productCategory
+
 
   return (
     <>
