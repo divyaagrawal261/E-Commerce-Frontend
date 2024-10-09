@@ -71,9 +71,6 @@ const SignUpForm = () => {
         }
     }
 
-    const handleClick = () => {
-        navigate('/register');
-    }
 
     return (
         <div className="wrapper text-center h-screen">
@@ -94,19 +91,19 @@ const SignUpForm = () => {
                 </div>
             </Modal>
             <h1 className="text-5xl mb-10"><b>Register</b></h1>
-            <form onSubmit={handleSubmit} className="p-5">
+            <form onSubmit={handleSubmit} className="p-5 rounded-xl border-2 border-blue-50 shadow-lg shadow-blue-500/50">
                 <div className="input-box text-xl my-2">
-                    <input ref={usernameRef} type="text" className="p-2" placeholder="Full Name" required />
+                    <input ref={usernameRef} type="text" className="p-2 outline-none w-80 border-b-2 mb-6" placeholder="Full Name" required />
                 </div>
                 <div className="input-box text-xl my-2">
-                    <input ref={emailRef} type="text" className="p-2" placeholder="Email" required />
+                    <input ref={emailRef} type="text" className="p-2 outline-none w-80 border-b-2 mb-6" placeholder="Email" required />
                 </div>
                 <div className="input-box text-xl my-2">
-                    <input ref={passwordRef} type="password" className="p-2" placeholder="Password" required />
+                    <input ref={passwordRef} type="password" className="p-2 outline-none w-80 border-b-2" placeholder="Password" required />
                 </div>
-                <button type="submit" className="mt-5 bg-cyan-500 text-white p-3"><p className="text-xl">Register</p></button>
+                <button type="submit" className="mt-5 bg-cyan-500 text-white px-4 py-2 hover:bg-cyan-600"><p className="text-xl">Register</p></button>
                 <div className="register-link mt-5">
-                    <p>Already have an account? <Link to="/login" onClick={handleClick} className="text-cyan-900 underline">Login</Link></p>
+                    <p>Already have an account? <Link to="/login" className="text-cyan-900 underline">Login</Link></p>
                 </div>
             </form>
         </div>
